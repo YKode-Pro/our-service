@@ -55,6 +55,17 @@
         color: #8b949e;
     }
 
+    input {
+        width: 80%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #8b949e;
+        border-radius: 6px;
+        background-color: #161b22;
+        color: #c9d1d9;
+        font-size: 16px;
+    }
+
     button {
         width: 100px;
         padding: 12px;
@@ -98,23 +109,14 @@
     </style>
 
     <script>
-        function isMobileDevice() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            var isMobileUserAgent = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile|windows phone/i.test(userAgent.toLowerCase());
-            var hasTouchSupport = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-            var isSmallScreen = window.innerWidth <= 1200;
-
-            return isMobileUserAgent || (hasTouchSupport && isSmallScreen);
-        }
-
-        function checkHuman(answer) {
-            if (answer === 10) {
-                var token = Math.random().toString(36).substr(2);
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            if (password === '20061218') {
+                const token = Math.random().toString(36).substr(2);
                 sessionStorage.setItem("humanToken", token);
-                
                 window.location.href = "yk.html?token=" + token;  
             } else {
-                alert("Please try again!");
+                alert("Incorrect password. Please try again!");
             }
         }
     </script>
@@ -122,12 +124,10 @@
 <body>
     <div class="container">
         <h2>Are you a human?</h2>
-        <p>Solve this to prove you're human: What is 5 + 5?</p>
-        <button onclick="checkHuman(10)">10</button>
-        <button onclick="checkHuman(5)">5</button>
+        <p>The password is 20061218</p>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <br>
+        <button onclick="checkPassword()">Submit</button>
     </div>
-
-    <script src="bot.js"></script>
-    <script src="security.js" defer></script>
 </body>
 </html>
