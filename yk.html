@@ -23,7 +23,7 @@
             function selectContactMethod() {
                
                 if (confirm("Would you like to contact us via WhatsApp? Click 'OK' for WhatsApp or 'Cancel' for Email.")) {
-                    const phoneNumber = "212 622-045265";
+                    const phoneNumber = "+212622045265";
                     const message = "I am interested in discussing web development services. Please reach out to me.";
                     window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                 } else {
