@@ -1,133 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Human Verification</title>
-    <link rel="icon" type="image/png" href="y.png">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPNKB62KRG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZPNKB62KRG');
-    </script>
-
-    <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Arial, sans-serif;
-    }
-
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #121521;
-        color: #c9d1d9;
-    }
-
-    .container {
-        background: #161b22;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        max-width: 600px;
-        width: 100%;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 26px;
-        margin-bottom: 20px;
-        color: #8b949e;
-    }
-
-    p {
-        font-size: 18px;
-        margin-bottom: 20px;
-        color: #8b949e;
-    }
-
-    input {
-        width: 80%;
-        padding: 12px;
-        margin: 10px 0;
-        border: 1px solid #8b949e;
-        border-radius: 6px;
-        background-color: #161b22;
-        color: #c9d1d9;
-        font-size: 16px;
-    }
-
-    button {
-        width: 100px;
-        padding: 12px;
-        margin: 5px;
-        background-color: #238636;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    button:hover {
-        background-color: #2ea043;
-    }
-
-    @media (max-width: 768px) {
-        h2 {
-            font-size: 22px;
-        }
-        p {
-            font-size: 16px;
-        }
-        button {
-            font-size: 14px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .container {
-            padding: 20px;
-        }
-        h2 {
-            font-size: 20px;
-        }
-        p {
-            font-size: 14px;
-        }
-    }
-    </style>
-
-    <script>
-        function checkPassword() {
-            const password = document.getElementById('passwordInput').value;
-            if (password === '20061218') {
-                const token = Math.random().toString(36).substr(2);
-                sessionStorage.setItem("humanToken", token);
-                window.location.href = "yk.html?token=" + token;  
-            } else {
-                alert("Incorrect password. Please try again!");
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Redirect</title>
+  <link rel="stylesheet" href="1.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Are you a human?</h2>
-        <p>The password is 20061218</p>
-        <input type="password" id="passwordInput" placeholder="Enter password">
-        <br>
-        <button onclick="checkPassword()">Submit</button>
+  <button class="button" onclick="redirectToInstagram()">
+    <div class="bg"></div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 342 208"
+      height="208"
+      width="342"
+      class="splash"
+    >
+      <!-- SVG content remains unchanged -->
+    </svg>
+
+    <div class="wrap">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 221 42"
+        height="42"
+        width="221"
+        class="path"
+      >
+        <!-- SVG path remains unchanged -->
+      </svg>
+
+      <div class="outline"></div>
+      <div class="content">
+        <span class="char state-1">
+          <span data-label="k" style="--i: 1">k</span>
+          <span data-label="s" style="--i: 2">s</span>
+          <span data-label="a" style="--i: 3">a</span>
+          <span data-label="." style="--i: 4">.</span>
+          <span data-label="y" style="--i: 5">y</span>
+          <span data-label="o" style="--i: 6">o</span>
+          <span data-label="u" style="--i: 7">u</span>
+          <span data-label="n" style="--i: 8">n</span>
+          <span data-label="e" style="--i: 9">e</span>
+          <span data-label="s" style="--i: 10">s</span>
+        </span>
+
+        <div class="icon">
+          <div></div>
+        </div>
+
+        <span class="char state-2">
+          <span data-label="k" style="--i: 1">k</span>
+          <span data-label="s" style="--i: 2">s</span>
+          <span data-label="a" style="--i: 3">a</span>
+          <span data-label="." style="--i: 4">.</span>
+          <span data-label="y" style="--i: 5">y</span>
+          <span data-label="o" style="--i: 6">o</span>
+          <span data-label="u" style="--i: 7">u</span>
+          <span data-label="n" style="--i: 8">n</span>
+          <span data-label="e" style="--i: 9">e</span>
+          <span data-label="s" style="--i: 10">s</span>
+        </span>
+      </div>
     </div>
+  </button>
+
+  <script>
+    function redirectToInstagram() {
+      window.location.href = "https://www.instagram.com/ksa.younes/";
+    }
+  </script>
 </body>
 </html>
